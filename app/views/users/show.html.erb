@@ -1,0 +1,11 @@
+<h1>Welcome, <%= @user.name %>!</h1>
+<% if @user.admin? %>
+    <h3>ADMIN</h3>
+<% end %>
+<p>Height: <%= @user.height %> in.</p>
+<p>Mood: <%= @user.mood %></p>
+<p>Happiness level: <%= @user.happiness %></p>
+<p>Tickets: <%= @user.tickets %></p>
+
+<%= link_to "See attractions", attractions_path %> <br> <br>
+<%= link_to "Log Out", logout_path, method: :post %>
